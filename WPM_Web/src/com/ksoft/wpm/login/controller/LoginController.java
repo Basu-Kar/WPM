@@ -14,6 +14,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.ksoft.wpm.login.validator.LoginValidator;
 import com.ksoft.wpm.login.vo.LoginVO;
+import com.ksoft.wpm.registration.vo.RegistrationVO;
 
 
 @Controller
@@ -42,7 +43,7 @@ public class LoginController {
 	}
 	
 	@RequestMapping("/register.do")
-	public ModelAndView register(){
+	public ModelAndView register(@ModelAttribute("") RegistrationVO registrationVO){
 		System.out.println("register................");
 		ModelAndView mv = new ModelAndView("registration/registration");
 		return mv;

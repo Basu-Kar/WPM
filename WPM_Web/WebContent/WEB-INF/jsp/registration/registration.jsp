@@ -9,99 +9,93 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Login</title>
 
-<style type="text/css">
-
-
-    </style>
-  
-  
 </head>
 <body>
 
 <div class="container">
 
+<p> Fill the details about the User</p>
 
    <form:form name="loginForm" id="loginForm" class="form-horizontal" commandName="registrationVO" action="">
-  
- 
-  
+   
     <div class="form-group " >
      <div class="col-sm-2" align="left">
-      	<label class="control-label"  for="userId">Email Id:</label>
+      	<label class="control-label"  for="userId">Email Id<span>*</span></label>
       	</div>
-      	<div class="col-sm-3" align="right">
-      	 <input type="text" class="form-control" placeholder="" required="required" title=""/>
+      	<div class="col-sm-3" align="left">
+      	<form:input path="email" class="form-control" placeholder="abc@def.com" required="required" title="" />
       </div>
       
     </div>
     <div class="form-group" >
       <div class="col-sm-2" align="left">
-      	<label class="control-label"  for="password">First Name:</label>
-      	</div>
-      	 <div class="col-sm-3" align="right">
-      	 <input type="text" class="form-control" placeholder="" required="required" title=""/>
-      </div>
-    </div>
-    
-     <div class="form-group" >
-      <div class="col-sm-2" align="left">
-      	<label class="control-label"  for="password">Last Name:</label>
-      	</div>
-      	 <div class="col-sm-3" align="right">
-      	 <input type="text" class="form-control" placeholder="" required="required" title=""/>
-      </div>
-    </div>
-    
-     <div class="form-group" >
-      <div class="col-sm-2" align="left">
-      	<label class="control-label"  for="password">Date of birth:</label>
-      	</div>
-      	 <div class="col-sm-3" align="right">
-      	 <input type="text" id="datepicker">
-      </div>
-    </div>
-    
-     <div class="form-group" >
-      <div class="col-sm-2" align="left">
-      	<label class="control-label"  for="password">Password:</label>
-      	</div>
-      	 <div class="col-sm-3" align="right">
-      	 <input type="text" class="form-control" placeholder="" required="required" title=""/>
-      </div>
-    </div>
-    
-     <div class="form-group" >
-      <div class="col-sm-2" align="left">
-      	<label class="control-label"  for="password">Confirm Password:</label>
-      	</div>
-      	 <div class="col-sm-3" align="right">
-      	 <input type="text" class="form-control" placeholder="" required="required" title=""/>
-      </div>
-    </div>
-    
-     <div class="form-group" >
-      <div class="col-sm-2" align="left">
-      	<label class="control-label"  for="password">Hint Question:</label>
+      	<label class="control-label"  for="password">First Name<span>*</span></label>
       	</div>
       	 <div class="col-sm-3" align="left">
-      	 <select>
-      	 	<option id="-1"> Select </option>
+      	 <form:input path="fName" class="form-control" placeholder="Basu" required="required" title="" />
+      </div>
+    </div>
+    
+     <div class="form-group" >
+      <div class="col-sm-2" align="left">
+      	<label class="control-label"  for="password">Last Name<span>*</span></label>
+      	</div>
+      	 <div class="col-sm-3" align="left">
+      	 <form:input path="lName" class="form-control" placeholder="Kar" required="required" title=""/>
+      </div>
+    </div>
+    
+     <div class="form-group" >
+      <div class="col-sm-2" align="left">
+      	<label class="control-label"  for="password">Date of Join<span>*</span></label>
+      	</div>
+      	 <div class="col-sm-3" align="left">
+      	 <form:input path="dateOfJoin" class="form-control" placeholder="MM/dd/YYYY" required="required" title="" readonly="readonly" />
+      </div>
+    </div>
+    
+     <div class="form-group" >
+      <div class="col-sm-2" align="left">
+      	<label class="control-label"  for="password">Password<span>*</span></label>
+      	</div>
+      	 <div class="col-sm-3" align="right">
+      	 <form:input path="password" class="form-control" placeholder="" required="required" title=""/>
+      </div>
+    </div>
+    
+     <div class="form-group" >
+      <div class="col-sm-2" align="left">
+      	<label class="control-label"  for="password">Confirm Password<span>*</span></label>
+      	</div>
+      	 <div class="col-sm-3" align="right">
+      	 <form:input path="confirmPassword" class="form-control" placeholder="" required="required" title=""/>
+      </div>
+    </div>
+    
+     <div class="form-group" >
+      <div class="col-sm-2" align="left">
+      	<label class="control-label"  for="password">Hint Question<span>*</span></label>
+      	</div>
+      	 <div class="col-sm-3" align="left">
+      	 <form:select path="hintQuestionId" class="form-control" placeholder="" required="required" title="">
+      	 
+      	 <option id="-1"> Select </option>
       	 	<option id="1"> Question1 </option>
       	 	<option id="2"> Question1 </option>
       	 	<option id="3"> Question1 </option>
       	 	<option id="4"> Question1 </option>
       	 	
-      	 </select>
+      	 </form:select>
       	 
       </div>
     </div>
     
      <div class="form-group" >
       <div class="col-sm-2" align="left">
-      	<label class="control-label"  for="password">Hint Answer:</label>
+      	<label class="control-label"  for="password">Hint Answer<span>*</span></label>
       	</div>
       	 <div class="col-sm-3" align="right">
-      	 <input type="text" class="form-control" placeholder="" required="required" title=""/>
+      	 <form:input path="hintAnswer" class="form-control" placeholder="" required="required" title=""/>
       </div>
     </div>
     <div class="form-group" >
@@ -116,7 +110,6 @@
 </form:form>
 
     </div> <!-- /container -->
-<script src="https://code.jquery.com/jquery.js"></script> 
 
 <script type="text/javascript">
 
@@ -126,8 +119,7 @@ function submitForm(formName, actionName){
 }
 
 $( document ).ready(function() {
-	alert("1");
-    $( "#datepicker" ).datepicker();
+    $( "#dateOfJoin" ).datepicker();
   });
   
 </script>

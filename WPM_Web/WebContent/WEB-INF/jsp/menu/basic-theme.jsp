@@ -5,7 +5,7 @@
     <title></title>
     
     <!-- Latest compiled and minified CSS -->
-    <link />
+    
 <link rel="stylesheet" href="commons/bootstrap/css/bootstrap.min.css">
 
 <!-- Optional theme -->
@@ -15,14 +15,18 @@
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="commons/bootstrap/js/bootstrap.min.js"></script>
-<script src="commons/jquery/jquery-1.11.2.min.js"></script>
-<script src="commons/jquery/jquery-ui.js"></script>
+
+
 <script src="commons/jquery/external/jquery/jquery.js"></script>
+
+<script src="commons/jquery/jquery-ui.min.js"></script>
+<script src="commons/jquery/jquery-ui.js"></script> 
+
 </head>
 
 <body>
 
-<table style="width: 100%;height:670px; ;background-color: #E6E6E6;" border="2px">
+<table style="width: 100%;height:670px; ;background-color: #E6E6E6;">
 
 	<tr> 
 		<td style="width: 10%; padding-top: 5%"> </td>

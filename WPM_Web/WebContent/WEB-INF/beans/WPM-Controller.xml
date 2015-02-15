@@ -21,8 +21,15 @@
       <property name="suffix" value=".jsp" />
    </bean>
 
-	<bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
-        <property name="basename" value="messages" />
+	<bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+        <property name="basenames">
+        	<array>
+        		<value>classpath:/messages</value>
+        		<value>classpath:com/ksoft/msg/validationMsg</value>
+        		
+        		
+        	</array>
+        </property>
     </bean>
     
 </beans>

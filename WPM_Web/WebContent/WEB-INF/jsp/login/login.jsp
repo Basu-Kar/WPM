@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-                <%-- 
+ 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %> --%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -49,7 +49,7 @@
 
 	<div style="outline: 1px solid orange;padding-top: 20px;" class="form-group col-sm-8" >
    <form:form name="loginForm" id="loginForm" class="form-horizontal" commandName="loginVO" action="/WPM_Web/validateLogin.do">
-  
+   <%-- 
    <spring:hasBindErrors name="loginVO">
         <div class="alert alert-danger" role="alert">
 		  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
@@ -58,11 +58,25 @@
 		  <ul>
 		  <li><form:errors path="userId" /></li>
 		  <li><form:errors path="password" /></li>
-		  </ul>
 		  
+		  </ul> 
 		</div>
-
     </spring:hasBindErrors>
+     --%>
+     <spring:bind path="*">
+        <div class="alert alert-danger" role="alert">
+		  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+		  <span class="sr-only">Error:ddsad</span>
+		  <span>Please enter below required fields</span>
+		  <ul>
+		   <c:forEach items="${status.errorMessages}" var="error">
+		  		<li>${error}</li> 
+		   </c:forEach>
+		  
+		  
+		  </ul> 
+		</div>
+    </spring:bind>
   
   
     <div class="form-group " >
