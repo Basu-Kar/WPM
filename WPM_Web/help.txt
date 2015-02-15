@@ -1,1 +1,2 @@
 http://localhost:9080/WPM_Web/login.do
+http://localhost:9080/WPM_Web/register.do
