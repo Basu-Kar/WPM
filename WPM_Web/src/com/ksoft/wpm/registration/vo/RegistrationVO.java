@@ -8,17 +8,23 @@ public class RegistrationVO {
 	private String dateOfJoin;
 	private String password;
 	private String confirmPassword;
-	private int hintQuestionId;
+	private String hintQuestionId;
 	private String hintAnswer;
 	
 	public String getEmail() {
 		return email;
+	}
+	public void setHintQuestionId(String hintQuestionId) {
+		this.hintQuestionId = hintQuestionId;
 	}
 	public void setEmail(String email) {
 		this.email = email;
 	}
 	public String getfName() {
 		return fName;
+	}
+	public String getHintQuestionId() {
+		return hintQuestionId;
 	}
 	public void setfName(String fName) {
 		this.fName = fName;
@@ -47,12 +53,12 @@ public class RegistrationVO {
 	public void setConfirmPassword(String confirmPassword) {
 		this.confirmPassword = confirmPassword;
 	}
-	public int getHintQuestionId() {
+	/*public int getHintQuestionId() {
 		return hintQuestionId;
 	}
 	public void setHintQuestionId(int hintQuestionId) {
 		this.hintQuestionId = hintQuestionId;
-	}
+	}*/
 	public String getHintAnswer() {
 		return hintAnswer;
 	}

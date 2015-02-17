@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-                <%-- 
+                
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %> --%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %> 
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,8 +16,23 @@
 
 <p> Fill the details about the User</p>
 
-   <form:form name="loginForm" id="loginForm" class="form-horizontal" commandName="registrationVO" action="">
+   <form:form name="loginForm" id="loginForm" class="form-horizontal" commandName="registrationVO" action="/WPM_Web/validateRegistration.do">
    
+   <spring:bind path="*">
+        <div class="alert alert-danger" role="alert">
+		  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+		  <span class="sr-only">Error:ddsad</span>
+		  <span>Please enter below required fields</span>
+		  <ul>
+		   <c:forEach items="${status.errorMessages}" var="error">
+		  		<li>${error}</li> 
+		   </c:forEach>
+		  
+		  
+		  </ul> 
+		</div>
+    </spring:bind>
+  
     <div class="form-group " >
      <div class="col-sm-2" align="left">
       	<label class="control-label"  for="userId">Email Id<span>*</span></label>
@@ -59,7 +74,7 @@
       	<label class="control-label"  for="password">Password<span>*</span></label>
       	</div>
       	 <div class="col-sm-3" align="right">
-      	 <form:input path="password" class="form-control" placeholder="" required="required" title=""/>
+      	 <form:input type="password" path="password" class="form-control" placeholder="" required="required" title=""/>
       </div>
     </div>
     
@@ -68,7 +83,7 @@
       	<label class="control-label"  for="password">Confirm Password<span>*</span></label>
       	</div>
       	 <div class="col-sm-3" align="right">
-      	 <form:input path="confirmPassword" class="form-control" placeholder="" required="required" title=""/>
+      	 <form:input type="password"  path="confirmPassword" class="form-control" placeholder="" required="required" title=""/>
       </div>
     </div>
     

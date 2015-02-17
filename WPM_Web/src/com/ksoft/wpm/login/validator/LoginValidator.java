@@ -18,10 +18,13 @@ public class LoginValidator implements Validator{
 		// TODO Auto-generated method stub
 		return false;
 	}
-
+/*
+ * (non-Javadoc)
+ * @see org.springframework.validation.Validator#validate(java.lang.Object, org.springframework.validation.Errors)
+ */
 	@Override
 	public void validate(Object arg0, Errors errors) {
-		LoginVO vo = (LoginVO)arg0;
+		LoginVO vo = (LoginVO)arg0;//Type Casting
 		ResourceBundle bundle = ResourceBundle.getBundle("com.ksoft.msg.validationMsg");
 		System.out.println(bundle.getString("valida.generic.chars"));
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "userId", "field.required.userId");
