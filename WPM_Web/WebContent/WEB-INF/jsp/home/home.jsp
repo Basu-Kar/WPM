@@ -12,24 +12,6 @@
 <body>
 <div class="container">
 
-<div class="container" >
-      <div class="col-sm-2" align="left">
-      	Logo - WPM
-      	</div>
-      	 <div class="col-sm-10" align="right">
-      	${home_user_name} <a href="#" onclick="submitForm('loginForm','logout.do');">logout</a>
-       </div>
-    </div>
-     
- <div class="container" >
-      <div class="col-sm-2" align="center" >
-      	
-      	</div>
-      	 <div class="col-sm-10" align="right">
-      	 
-       </div>
-    </div>
-     
 </div>
 </body>
 </html>
