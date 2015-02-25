@@ -6,7 +6,6 @@ import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
-import org.springframework.validation.annotation.Validated;
 
 import com.ksoft.wpm.login.vo.LoginVO;
 
@@ -25,7 +24,8 @@ public class LoginValidator implements Validator{
 	@Override
 	public void validate(Object arg0, Errors errors) {
 		LoginVO vo = (LoginVO)arg0;//Type Casting
-		
+		/*ResourceBundle bundle = ResourceBundle.getBundle("com.ksoft.msg.validationMsg");
+		System.out.println(bundle.getString("valida.generic.chars"));*/
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "userId", "field.required.userId");
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "password", "field.required.password");
 		if(vo.getUserId()==null || vo.getUserId().trim().length()<5 || vo.getUserId().trim().length()>20){

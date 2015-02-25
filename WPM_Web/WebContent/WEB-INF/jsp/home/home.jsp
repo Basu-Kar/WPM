@@ -9,9 +9,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Home</title>
 </head>
-<body>
-<div class="container">
-
+<body >
+<div style="padding-top: 2px;">
+<ul class="nav nav-pills">
+  
+  
+  
+</ul>
 </div>
-</body>
+</body> 
 </html>

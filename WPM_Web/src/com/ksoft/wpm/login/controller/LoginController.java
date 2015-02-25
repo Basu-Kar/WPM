@@ -1,5 +1,6 @@
 package com.ksoft.wpm.login.controller;
 
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.ksoft.wpm.common.session.ISessionHolder;
+import com.ksoft.wpm.common.vo.UserVO;
 import com.ksoft.wpm.login.validator.LoginValidator;
 import com.ksoft.wpm.login.vo.LoginVO;
 import com.ksoft.wpm.registration.validator.RegistrationValidator;
@@ -28,6 +31,8 @@ public class LoginController {
 	@Autowired
 	private RegistrationValidator registrationValidator;
 	
+	@Autowired
+	private ISessionHolder<String> sessionHolder;
 	
 	 
 	@RequestMapping(value="/login.do")
@@ -52,7 +57,7 @@ public class LoginController {
 	
 	@RequestMapping(value="/register.do",method=RequestMethod.POST)
 	public ModelAndView register(@ModelAttribute("") RegistrationVO registrationVO){
-		LOGGER.info("Register......");
+		LOGGER.log(Level.INFO, "Register......");
 		ModelAndView mv = new ModelAndView("registration/registration");
 		return mv;
 	}

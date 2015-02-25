@@ -17,7 +17,7 @@
       	Logo - WPM
       	</div>
       	 <div class="col-sm-10" align="right">
-      	${home_user_name} <a href="#" onclick="submitForm('loginForm','logout.do');">logout</a>
+      	Not ${home_user_name}? &nbsp;&nbsp;|&nbsp; &nbsp;<a href="#" onclick="submitForm('loginForm','logout.do');">logout</a>
        </div>
     </div>
      

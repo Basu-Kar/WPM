@@ -13,15 +13,13 @@
 <link rel="stylesheet" href="commons/jquery/jquery-ui.min.css">
 <link rel="stylesheet" href="commons/jquery/jquery-ui.theme.min.css">
 
-<!-- Latest compiled and minified JavaScript -->
-<script src="commons/bootstrap/js/bootstrap.min.js"></script>
 
 
 <script src="commons/jquery/external/jquery/jquery.js"></script>
 
 <script src="commons/jquery/jquery-ui.min.js"></script>
 <script src="commons/jquery/jquery-ui.js"></script> 
-
+<script src="commons/bootstrap/js/*.js"></script>
 </head>
 
 <body>
