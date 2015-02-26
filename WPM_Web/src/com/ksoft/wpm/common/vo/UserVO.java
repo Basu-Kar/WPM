@@ -6,6 +6,8 @@ public class UserVO {
 	private String lName;
 	private String userName;
 	private String emailId;
+	private int roleId;
+	
 	
 	public String getfName() {
 		return fName;
@@ -30,6 +32,12 @@ public class UserVO {
 	}
 	public void setEmailId(String emailId) {
 		this.emailId = emailId;
+	}
+	public int getRoleId() {
+		return roleId;
+	}
+	public void setRoleId(int roleId) {
+		this.roleId = roleId;
 	}
 	
 	

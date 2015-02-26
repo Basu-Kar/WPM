@@ -55,21 +55,4 @@ public class LoginController {
 		//return new ModelAndView("/login/login");
 	}
 	
-	@RequestMapping(value="/register.do",method=RequestMethod.POST)
-	public ModelAndView register(@ModelAttribute("") RegistrationVO registrationVO){
-		LOGGER.log(Level.INFO, "Register......");
-		ModelAndView mv = new ModelAndView("registration/registration");
-		return mv;
-	}
-	
-	/*@RequestMapping("/validateRegistration.do")
-	public ModelAndView validateRegistration(@ModelAttribute("registrationVO")RegistrationVO registrationVO,BindingResult bindingResult,Model model){
-		registrationValidator.validate(registrationVO, bindingResult);
-		System.out.println("..............Registration Controller..");
-		if(bindingResult.hasErrors()){
-			System.out.println("..................HAS ERRORS.........");
-		}
-		return new ModelAndView("/registration/registration");
-	}
-	*/
 }

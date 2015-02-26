@@ -1,22 +1,33 @@
 package com.ksoft.wpm.login.dao;
 
+import org.hibernate.Criteria;
+import org.hibernate.criterion.Expression;
+import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
 
+import com.ksoft.wpm.common.dao.BaseDAO;
 import com.ksoft.wpm.common.vo.UserVO;
 import com.ksoft.wpm.login.vo.LoginVO;
 
 @Repository
-public class LoginDAO implements ILoginDAO{
+public class LoginDAO  extends BaseDAO implements ILoginDAO{
 
 	@Override
 	public boolean isValidUser(LoginVO loginVO) {
-		// TODO Auto-generated method stub
-		return false;
+		Criteria criteria = getSession().createCriteria(LoginVO.class);
+		criteria.add(Restrictions.eq("userId", loginVO.getUserId()).ignoreCase());
+		criteria.add(Expression.eq("password", loginVO.getPassword()));
+		LoginVO vo = (LoginVO)criteria.uniqueResult();
+		if(vo==null){
+			return false;
+		}else{
+			return true;
+		}
 	}
 
 	@Override
 	public UserVO getUseDetails(String userId) {
-		// TODO Auto-generated method stub
+		
 		return null;
 	}
 

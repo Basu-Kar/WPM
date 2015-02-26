@@ -3,18 +3,22 @@
  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">  
   
- <hibernate-mapping>  
-  <class name="com.org.employeevo.EmployeeVo"  table="emp">
-    <id name="empId" column="emp_Id" type="int">
-     <generator class="native"></generator>  
-    </id>
-    <property name="empFname" column="emp_fname"></property>  
-    <property name="lastName" column="emp_lname"></property>  
-    <property name="empEmailid" column="emp_email"></property>  
-    <property name="salary" column="emp_sal"></property>
+ <hibernate-mapping package="">  
+  <class name="com.ksoft.wpm.login.vo.LoginVO"  table="wpm" entity-name="authVO">
+    <id name="userId" column="email" type=""></id>
+    <property name="password" column="password"></property>
   
   </class> 
   
+  <class name="com.ksoft.wpm.common.vo.UserVO"  table="wpm" entity-name="userVO">
+    <id name="userId" column="user_id" type=""></id>
+    <property name="fanme" column="f_name"></property>
+    <property name="lname" column="l_name"></property>
+    <property name="password" column="role_id"></property>
+    <property name="emailId" column="email"></property>
+    
+  
+  </class> 
   
   
             
