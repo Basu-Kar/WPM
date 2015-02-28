@@ -70,10 +70,12 @@
       	
       	</div>
       	 <div class="col-sm-3" align="left">
-      	 <button type="submit" class="btn btn-primary">Submit</button> <a href="#" onclick="submitForm('loginForm','register.do');">New User</a>
+      	 <button type="submit" class="btn btn-primary">Submit</button> 
+      	 <a href="#" onclick="submitForm('loginForm','register.do');">New User</a>
        </div>
     </div>
    
+   <p onmouseover="fnc();" id="mypgh"> This is my paragraph</p>
   
 <%--Today is <easy:wpmrole/>--%>
 </form:form>
@@ -81,6 +83,10 @@
     </div> <!-- /container -->
 
 <script type="text/javascript">
+
+function fnc(){
+	alert(document.getElementById('mypgh').innerHTML);
+}
 
 function submitForm(formName, actionName){
 	document.getElementById(formName).action=actionName;
