@@ -1,6 +1,7 @@
 package com.ksoft.wpm.login.dao;
 
 import org.hibernate.Criteria;
+import org.hibernate.Query;
 import org.hibernate.criterion.Expression;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
@@ -27,8 +28,10 @@ public class LoginDAO  extends BaseDAO implements ILoginDAO{
 
 	@Override
 	public UserVO getUseDetails(String userId) {
-		
-		return null;
+		Query query=getSession().getNamedQuery("findUserByEmailId");
+		query.setString("emailId", userId);
+		UserVO userVO = (UserVO)query.uniqueResult();
+		return userVO;
 	}
 
 }

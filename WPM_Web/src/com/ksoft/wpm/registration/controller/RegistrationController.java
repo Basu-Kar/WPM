@@ -33,11 +33,11 @@ public class RegistrationController {
 	
 	@RequestMapping("/validateRegistration.do")
 	public ModelAndView validateRegistration(@ModelAttribute("registrationVO")RegistrationVO registrationVO,BindingResult bindingResult,Model model){
-		/*registrationValidator.validate(registrationVO, bindingResult);
+		registrationValidator.validate(registrationVO, bindingResult);
 		System.out.println("..............Registration Controller..");
 		if(bindingResult.hasErrors()){
 			System.out.println("..................HAS ERRORS.........");
-		}*/
+		}
 		
 		QuestionVO qVO = new QuestionVO();
 		qVO.setQuestionName("Question1");

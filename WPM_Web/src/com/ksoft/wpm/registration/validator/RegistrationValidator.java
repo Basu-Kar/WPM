@@ -14,8 +14,7 @@ import com.ksoft.wpm.util.WPMWhiteListCharUtil;
 @Component
 public class RegistrationValidator implements Validator {
 
-	WPMWhiteListCharUtil wPMWhiteListCharUtil=new 
-			WPMWhiteListCharUtil();
+	
 	@Override
 	public boolean supports(Class<?> arg0) {
 		// TODO Auto-generated method stub
@@ -25,7 +24,7 @@ public class RegistrationValidator implements Validator {
 	@Override
 	public void validate(Object arg0, Errors errors) {
 		RegistrationVO vo = (RegistrationVO)arg0;
-		boolean x=wPMWhiteListCharUtil.isValidEmail(vo.getEmail());
+		boolean x=WPMWhiteListCharUtil.isValidEmail(vo.getEmail());
 		 if(x==false){
 				errors.rejectValue("email","field.required.email");	
 			}
