@@ -24,6 +24,7 @@ Technologies used in this project:
 3. Bootstarp CSS
 4. Jquery
 5. JavaScript
+6. Apache POI
 
 
 Example of J2EE features
@@ -31,4 +32,16 @@ Example of J2EE features
 2. Spring Core
 3. Hibernate configuration
 4. Spring Testing using mock
-
+5. Excel Report
+6. File Upload
+7. Filter
+8. Spring MVC Interceptor
+9. AOP transaction handling
+10. JDK Logging
+11. Spring Rest Service
+12. Email trigger
+13. Jquery Autocomplete
+14. Jquery Modal Windows
+15. Jquery AJAX
+16. Jquery Grid
+17. HTML5 Features
