@@ -6,17 +6,16 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
-<%@ taglib prefix="easy" tagdir="/WEB-INF/tags" %>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Login</title>
 
 
 </head>
 <body>
-<div style="min-height: 700px;">
+
 <div class="container">
 
-	<div style="outline: 1px solid orange;padding-top: 10%;" class="form-group col-sm-8" >
+	<div style="outline: 1px solid orange;padding-top: 20px;" class="form-group col-sm-8" >
    <form:form name="loginForm" id="loginForm" class="form-horizontal" commandName="loginVO" action="/WPM_Web/validateLogin.do">
    <%-- 
    <spring:hasBindErrors name="loginVO">
@@ -64,7 +63,7 @@
       	 <div class="col-sm-3" align="right">
       	 <form:input type="password" path="password" class="form-control" required="required" title="Enter password." />
       </div>
-    </div> 
+    </div>
      <div class="form-group" >
       <div class="col-sm-2" align="left">
       	
@@ -75,19 +74,19 @@
        </div>
     </div>
    
-   <!-- <p onmouseover="fnc();" id="mypgh"> This is my paragraph</p> -->
+   <p onmouseover="fnc();" id="mypgh"> This is my paragraph</p>
   
-<%--Today is <easy:wpmrole/>--%>
 </form:form>
 </div>
     </div> <!-- /container -->
-</div>
+<script src="https://code.jquery.com/jquery.js"></script> 
+
 <script type="text/javascript">
-/* 
+
 function fnc(){
 	alert(document.getElementById('mypgh').innerHTML);
 }
- */
+
 function submitForm(formName, actionName){
 	document.getElementById(formName).action=actionName;
 	document.getElementById(formName).submit();
