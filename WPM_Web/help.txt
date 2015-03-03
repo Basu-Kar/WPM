@@ -1,2 +1,5 @@
 http://localhost:9080/WPM_Web/login.do
-http://localhost:9080/WPM_Web/register.do
+http://localhost:91080/WPM_Web/register.do
+http://localhost:8082/WPM_Web/getUserDetails.do
+http://localhost:8082/WPM_Web/getLoginUserDetails.do
+

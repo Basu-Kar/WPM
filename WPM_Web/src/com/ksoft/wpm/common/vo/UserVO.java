@@ -2,6 +2,9 @@ package com.ksoft.wpm.common.vo;
 
 import java.util.Date;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
 public class UserVO {
 
 	private int userId;
@@ -76,6 +79,7 @@ public class UserVO {
 	public void setDateOfJoinStr(String dateOfJoinStr) {
 		this.dateOfJoinStr = dateOfJoinStr;
 	}
+	//@JsonSerialize(using=JsonDateSerializer.class)
 	public Date getDateOfJoin() {
 		return dateOfJoin;
 	}

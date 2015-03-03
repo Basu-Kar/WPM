@@ -19,12 +19,12 @@
 
 <script src="commons/jquery/jquery-ui.min.js"></script>
 <script src="commons/jquery/jquery-ui.js"></script> 
-<script src="commons/bootstrap/js/*.js"></script>
+<script src="commons/bootstrap/js/bootstrap.min.js"></script>
 </head>
 
 <body>
 
-<table style="width: 100%;height:670px; ;background-color: #E6E6E6;">
+<table  style="background-color: #E6E6E6;height: auto" border="1">
 
 	<tr> 
 		<td style="width: 10%; padding-top: 5%"> </td>
