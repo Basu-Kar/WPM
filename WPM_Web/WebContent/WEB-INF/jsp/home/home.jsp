@@ -40,26 +40,26 @@
   		<tr>
   		<th>Project Id</th>
   		<th>Project Name</th>
-  		<th>Assigned To</th>
+  		<th>Project Desc</th>
   		<th>Start Date</th>
   		<th>End Date</th>
+  		<th>Assigned To</th>
   		 </tr>
   	</thead>
   	<tbody >
+  	<c:forEach items="${projectList}" var="vo">
   	<tr>
-  		<td>1</td>
-  		<td></td>
-  		<td>2</td>
-  		<td>3</td>
-  		<td>4</td>
-  		 </tr>
-  	<tr>
-  		<td>1</td>
-  		<td></td>
-  		<td>2</td>
-  		<td>3</td>
-  		<td>4</td>
-  		 </tr>
+  		<td><a href="#" onclick="submitProject('homeform','showWorkPackets.do',${vo.projectId});">${vo.projectId}</a></td>
+  		<td>${vo.projectName}</td>
+  		<td>${vo.projectDesc}</td>
+  		<td>${vo.projectStartDateStr}</td>
+  		<td>${vo.projectEndDateStr}</td>
+  		<td>${vo.projectAssignedTo}</td>
+  	</tr>
+  	
+  	</c:forEach>
+  	
+  
   	</tbody>
   
   </table>
@@ -70,6 +70,12 @@
   <script type="text/javascript">
 
 function submitFormHome(formName, actionName){
+	document.getElementById(formName).action=actionName;
+	document.getElementById(formName).submit();
+}
+
+function submitProject(formName, actionName, projId){
+	alert(projId);
 	document.getElementById(formName).action=actionName;
 	document.getElementById(formName).submit();
 }

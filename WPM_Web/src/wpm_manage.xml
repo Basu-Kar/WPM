@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">  
+  
+ <hibernate-mapping package="">  
+  <class name="com.ksoft.wpm.common.vo.ProjectVO"  table="wpm_proj">
+    <id name="projectId" column="proj_id" >
+    <generator class="increment"></generator>
+    </id>
+    <property name="projectName" column="proj_name"></property>
+  <property name="projectDesc" column="proj_desc"></property>
+  <property name="projectStartDate" column="proj_start_date"></property>
+  <property name="projectEndDate" column="proj_end_date"></property>
+  <property name="projectStatus" column="proj_status"></property>
+  <property name="projectAssignedTo" column="proj_assigned_to"></property>
+  </class> 
+  
+            
+ </hibernate-mapping>

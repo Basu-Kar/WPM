@@ -1,5 +1,6 @@
 package com.ksoft.wpm.login.controller;
 
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -15,10 +16,12 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.ksoft.wpm.common.session.ISessionHolder;
+import com.ksoft.wpm.common.vo.ProjectVO;
 import com.ksoft.wpm.common.vo.UserVO;
 import com.ksoft.wpm.login.bsl.LoginManager;
 import com.ksoft.wpm.login.validator.LoginValidator;
 import com.ksoft.wpm.login.vo.LoginVO;
+import com.ksoft.wpm.manage.bsl.IWPMProjectManager;
 import com.ksoft.wpm.registration.validator.RegistrationValidator;
 import com.ksoft.wpm.registration.vo.RegistrationVO;
 
@@ -37,6 +40,8 @@ public class LoginController {
 	private LoginManager loginManager;
 	@Autowired
 	private ISessionHolder<String> sessionHolder;
+	@Autowired
+	private IWPMProjectManager projectManager;
 	
 	 
 	@RequestMapping(value="/login.do")
@@ -53,6 +58,8 @@ public class LoginController {
 			mu.setViewName("/login/login");
 		}
 		else{
+			List<ProjectVO> projectList= projectManager.getAllProjects(1);
+			mu.addObject("projectList", projectList);
 			mu.setViewName("/home/home");
 		}
 		return mu;
