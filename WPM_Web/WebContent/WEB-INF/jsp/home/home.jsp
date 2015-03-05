@@ -21,7 +21,7 @@
    
       <li role="presentation" class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
-          Dropdown <span class="caret"></span>
+          Action <span class="caret"></span>
         </a>
         <ul class="dropdown-menu" role="menu">
           <li><a href="#" onclick="submitFormHome('homeform','addProject.do');">Add Project</a></li>
@@ -36,7 +36,7 @@
   <h3>Project details:</h3>
   <table class="table table-bordered table-hover">
   
-  	<thead style="background-color: blue;">
+  	<thead style="background-color: gray;">
   		<tr>
   		<th>Project Id</th>
   		<th>Project Name</th>
