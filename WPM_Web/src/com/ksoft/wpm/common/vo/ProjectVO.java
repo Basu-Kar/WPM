@@ -4,7 +4,7 @@ public class ProjectVO {
 
 	private int projectId;
 	private String projectName;
-	private String projectDesc;
+	private String projectDesc; 
 	private String projectStartDateStr;
 	private String projectEndDateStr;
 	
