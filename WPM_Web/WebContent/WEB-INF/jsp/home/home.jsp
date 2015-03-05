@@ -12,7 +12,7 @@
 <body >
 
   
-  <form:form>
+  <form:form method="post" commandName="projectVO" id="homeform" action="addProject.do">
   <div style="min-height:700px">
  	<div >
   
@@ -24,7 +24,7 @@
           Dropdown <span class="caret"></span>
         </a>
         <ul class="dropdown-menu" role="menu">
-          <li><a href="#">Add Project</a></li>
+          <li><a href="#" onclick="submitFormHome('homeform','addProject.do');">Add Project</a></li>
           <li><a href="#">Project Summary</a></li>
         </ul>
       </li>
@@ -33,16 +33,16 @@
  	
   </div>
   
-  <h3>Work packet details:</h3>
+  <h3>Project details:</h3>
   <table class="table table-bordered table-hover">
   
   	<thead style="background-color: blue;">
   		<tr>
-  		<th>Work Packet Id</th>
-  		<th>Work Packet Name</th>
+  		<th>Project Id</th>
+  		<th>Project Name</th>
   		<th>Assigned To</th>
-  		<th>Status</th>
-  		<th>Reviewer</th>
+  		<th>Start Date</th>
+  		<th>End Date</th>
   		 </tr>
   	</thead>
   	<tbody >
@@ -67,6 +67,12 @@
   
 </div>
   </form:form>
-  
+  <script type="text/javascript">
+
+function submitFormHome(formName, actionName){
+	document.getElementById(formName).action=actionName;
+	document.getElementById(formName).submit();
+}
+</script>
 </body> 
 </html>
