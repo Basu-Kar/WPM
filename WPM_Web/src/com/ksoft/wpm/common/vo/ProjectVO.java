@@ -5,6 +5,9 @@ public class ProjectVO {
 	private int projectId;
 	private String projectName;
 	private String projectDesc;
+	private String projectStartDateStr;
+	private String projectEndDateStr;
+	
 	public int getProjectId() {
 		return projectId;
 	}
@@ -22,6 +25,18 @@ public class ProjectVO {
 	}
 	public void setProjectDesc(String projectDesc) {
 		this.projectDesc = projectDesc;
+	}
+	public String getProjectStartDateStr() {
+		return projectStartDateStr;
+	}
+	public void setProjectStartDateStr(String projectStartDateStr) {
+		this.projectStartDateStr = projectStartDateStr;
+	}
+	public String getProjectEndDateStr() {
+		return projectEndDateStr;
+	}
+	public void setProjectEndDateStr(String projectEndDateStr) {
+		this.projectEndDateStr = projectEndDateStr;
 	}
 	
 }
