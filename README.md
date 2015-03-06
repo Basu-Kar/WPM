@@ -8,7 +8,7 @@ WPM(Work Packet Management) can be used in IT corporates for the project lifecyc
 
 2. Estimate your task/workpacket.
 
-3. Assign the work packet to a team member one every cycle(design, construction, testing etc.)
+3. Assign the work packet to a team member on every cycle(design, construction, testing etc.)
 
 4. Request for Review(Design, Code, Test Cases etc.)
 
