@@ -17,7 +17,7 @@
 <p> Fill the details about the User</p>
 
    <form:form name="loginForm" id="loginForm" class="form-horizontal" commandName="registrationVO" action="/WPM_Web/validateRegistration.do">
-   
+   <spring:hasBindErrors name="registrationVO">
    <spring:bind path="*">
         <div class="alert alert-danger" role="alert">
 		  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
@@ -32,13 +32,13 @@
 		  </ul> 
 		</div>
     </spring:bind>
-  
+  </spring:hasBindErrors>
     <div class="form-group " >
      <div class="col-sm-2" align="left">
       	<label class="control-label"  for="userId">Email Id<span>*</span></label>
       	</div>
       	<div class="col-sm-3" align="left">
-      	<form:input path="email" class="form-control" placeholder="abc@def.com" required="required" title="" />
+      	<form:input path="email" class="form-control" placeholder="abc@def.com" required="required" title="" minlength="8" maxlength="20"/>
       </div>
       
     </div>
@@ -47,7 +47,7 @@
       	<label class="control-label"  for="password">First Name<span>*</span></label>
       	</div>
       	 <div class="col-sm-3" align="left">
-      	 <form:input path="fName" class="form-control" placeholder="Basu" required="required" title="" />
+      	 <form:input path="fName" class="form-control" placeholder="Basu" required="required" title="" minlength="5" maxlength="15"/>
       </div>
     </div>
     
@@ -56,7 +56,7 @@
       	<label class="control-label"  for="password">Last Name<span>*</span></label>
       	</div>
       	 <div class="col-sm-3" align="left">
-      	 <form:input path="lName" class="form-control" placeholder="Kar" required="required" title=""/>
+      	 <form:input path="lName" class="form-control" placeholder="Kar" required="required" title=""  minlength="5" maxlength="15"/>
       </div>
     </div>
     
@@ -74,7 +74,7 @@
       	<label class="control-label"  for="password">Password<span>*</span></label>
       	</div>
       	 <div class="col-sm-3" align="right">
-      	 <form:input type="password" path="password" class="form-control" placeholder="" required="required" title=""/>
+      	 <form:input type="password" path="password" class="form-control" placeholder="" required="required" title=""  minlength="5" maxlength="15"/>
       </div>
     </div>
     
@@ -83,7 +83,7 @@
       	<label class="control-label"  for="password">Confirm Password<span>*</span></label>
       	</div>
       	 <div class="col-sm-3" align="right">
-      	 <form:input type="password"  path="confirmPassword" class="form-control" placeholder="" required="required" title=""/>
+      	 <form:input type="password"  path="confirmPassword" class="form-control" placeholder="" required="required" title=""  minlength="5" maxlength="15"/>
       </div>
     </div>
     
@@ -110,7 +110,7 @@
       	<label class="control-label"  for="password">Hint Answer<span>*</span></label>
       	</div>
       	 <div class="col-sm-3" align="right">
-      	 <form:input path="hintAnswer" class="form-control" placeholder="" required="required" title=""/>
+      	 <form:input path="hintAnswer" class="form-control" placeholder="" required="required" title=""  minlength="5" maxlength="15"/>
       </div>
     </div>
     <div class="form-group" >
