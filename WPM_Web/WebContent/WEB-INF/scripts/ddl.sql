@@ -7,7 +7,7 @@ CREATE TABLE `qstn_def` (
 
 CREATE TABLE `review_cmnt` (
   `WPM_ID` int(5) NOT NULL,
-  `REVIEW_ID` int(5) NOT NULL,
+  `REVIEW_ID` int(5) NOT NULL, 
   `CMNT_ID` int(5) NOT NULL AUTO_INCREMENT,
   `ASSIGNED_TO` int(5) NOT NULL,
   `REVIEW_STAT_ID` int(5) DEFAULT NULL,
